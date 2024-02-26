@@ -56,7 +56,7 @@ Use the `mongo` command line client to run the following queries - save both the
 
 1. show exactly two documents from the `listings` collection in any order
 1. show exactly 10 documents in any order, but "prettyprint" in easier to read format, using the `pretty()` function.
-1. choose two hosts (by reffering to their `host_id` values) who are superhosts (available in the `host_is_superhost` field), and show all of the listings offered by both of the two hosts
+1. choose two hosts (by refering to their `host_id` values) who are superhosts (available in the `host_is_superhost` field), and show all of the listings offered by both of the two hosts
    - only show the `name`, `price`, `neighbourhood`, `host_name`, and `host_is_superhost` for each result
 1. find all the unique `host_name` values (see [the docs](https://docs.mongodb.com/manual/reference/method/db.collection.distinct/))
 1. find all of the places that have more than 2 `beds` in a neighborhood of your choice (referred to as either the `neighborhood` or `neighbourhood_group_cleansed` fields in the data file), ordered by `review_scores_rating` descending
@@ -121,7 +121,7 @@ connection = pymongo.MongoClient("your_db_host", 27017,
                                 username="your_db_username",
                                 password="your_db_password",
                                 authSource="your_db_name")
-collection = connection["your_db_name"]]["your_db_collection_name"]
+collection = connection["your_db_name"]["your_db_collection_name"]
 
 # the collection variable will be a reference to your collection
 docs = collection.find({}).limit(10) # get the first 10 documents
